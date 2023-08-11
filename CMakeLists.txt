@@ -48,6 +48,11 @@ install(TARGETS
     DESTINATION lib/${PROJECT_NAME}
 )
 
+install(
+  DIRECTORY ${CMAKE_SOURCE_DIR}/unitree_legged_sdk-master/lib/
+  DESTINATION lib  
+)
+
 ament_package()
 
 
