@@ -16,7 +16,7 @@ if("${CMAKE_SYSTEM_PROCESSOR}" MATCHES "x86_64.*")
 else()
   set(ARCH arm64)
 endif()
-set(EXTRA_LIBS -pthread libunitree_legged_sdk_${ARCH}.so lcm)
+set(EXTRA_LIBS -pthread libunitree_legged_sdk_${ARCH}.so)
 
 
 set(CMAKE_CXX_FLAGS "-O3")
