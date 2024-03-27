@@ -16,19 +16,14 @@ if("${CMAKE_SYSTEM_PROCESSOR}" MATCHES "x86_64.*")
 else()
   set(ARCH arm64)
 endif()
-set(EXTRA_LIBS -pthread libunitree_legged_sdk_${ARCH}.so)
+set(EXTRA_LIBS -pthread)
 
 
 set(CMAKE_CXX_FLAGS "-O3")
 
 include_directories(
     include
-    ${CMAKE_SOURCE_DIR}/unitree_legged_sdk-master/include
 )
-
-
-
-link_directories(${CMAKE_SOURCE_DIR}/unitree_legged_sdk-master/lib)
 
 add_executable(ros2_udp src/ros2_udp.cpp)
 target_link_libraries(ros2_udp ${EXTRA_LIBS})
